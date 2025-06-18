@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Festival</title>
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script> <!-- css -->
+  <link rel="stylesheet" href="/app.css">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #5A827E;
+      --secondary: #B9D4AA;
+      --tertiary: #FAFFCA;
+      --light: #84AE92;
+    }
+
+    main {
+      padding-top: 80px;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at 20% 20%, #FAFFCA 0%, transparent 30%),
+        radial-gradient(circle at 80% 80%, #B9D4AA 0%, transparent 30%),
+        linear-gradient(135deg, #5A827E, #84AE92);
+      background-blend-mode: overlay, overlay, normal;
+
+
+    }
+
+    #hero {
+      background-image: url("/assets festival/lantern.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 90vh;
+    }
+
+    #hero .container {
+      height: 90vh;
+    }
+
+    #hero .container div {
+      background: linear-gradient(135deg, rgba(90, 130, 126, 0.85), rgba(184, 212, 170, 0.85));
+
+    }
+
+    .circle-video {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 0 15px 10px var(--primary);
+      flex-shrink: 0;
+    }
+
+    .circle-video video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-custom {
+      background: #ffffff !important;
+      /* Glassy effect */
+      height: 100%;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 15px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: border 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 10px;
+    }
+
+    .card-item {
+      margin-bottom: 20px;
+    }
+
+    .card-custom:hover {
+      transform: scale(1.02);
+      border-color: var(--tertiary);
+      box-shadow: 0 0 15px var(--tertiary);
+    }
+
+    .card-item h5 {
+      font-size: 1.5rem !important;
+    }
+
+    button {
+      margin: 20px 10px 20px 0px;
+    }
+
+   
+  </style>
+</head>
+
+<body>
+  <header class="fixed-top">
+    <nav class="navbar navbar-expand-lg bg-dark text-light">
+      <div class="container">
+        <div style="height: 70px;">
+          <img src="/assets festival/FESTIVALS-cropped-final.png" alt="Festivals Logo"
+            style="height: 100%; object-fit: contain;">
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-5 mb-2 mb-lg-0 gap-2">
+            <li class="nav-item">
+              <a class="nav-link " href="/index.html"><i class="fa-solid fa-house"></i> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about us/about.html"><i class="fa-solid fa-user"></i> About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link active dropdown-toggle" href="/festival page/festival.html" id="navbarDropdown"
+                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-rainbow"></i> Festivals
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="/festivals/muslim.html">Muslims</a></li>
+                <li><a class="dropdown-item" href="/festivals/hindu.html">Hindus</a></li>
+                <li><a class="dropdown-item" href="/festivals/sikhism.html">Sikh</a></li>
+                <li><a class="dropdown-item" href="/festivals/buddhist.html">Buddhist</a></li>
+                <li><a class="dropdown-item" href="/festivals/christian.html">Christian</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/book page/book.html"><i class="fa-solid fa-book"></i> Books</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/E-project gallery/gallery.html"><i class="fa-brands fa-windows"></i>
+                Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact/contact.html"><i class="fa-solid fa-phone-volume"></i> Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/querry/querry.html"><i class="fa-solid fa-magnifying-glass"></i> Query</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class=" text-dark">
+    <section id="hero">
+      <div class="container d-flex flex-column align-items-center justify-content-center">
+        <div class="p-4 text-center">
+          <h1 class="fw-bold">One World, Many Festivals</h1>
+          <p>"Festivals unite hearts, celebrating our shared joy and diverse traditions."</p>
+        </div>
+      </div>
+    </section>
+    <section id="cards">
+      <!-- buttons -->
+      <div class=" text-center">
+        <button class="btn btn-success " data-filter="all">All</button>
+        <button class="btn btn-outline-success" data-filter="muslim">Muslim</button>
+        <button class="btn btn-outline-success" data-filter="hindu">Hindu</button>
+        <button class="btn btn-outline-success" data-filter="christian">Christian</button>
+        <button class="btn btn-outline-success" data-filter="sikh">Sikh</button>
+        <button class="btn btn-outline-success" data-filter="buddhist">Buddhist</button>
+      </div>
+
+      <!-- Cards Container -->
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-2" id="cardContainer">
+
+          <!-- card 1 -->
+          <div class="col card-item" data-religion="muslim">
+
+            <div class="card-custom bg-white">
+              <div class="circle-video">
+                <video autoplay loop muted>
+                  <source src="/festival page/videos/7248996-hd_1920_1080_24fps.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div>
+                <h5 class="mb-1">Eid-ul-Fitr</h5>
+                <p class="mb-0">Eid al-Fitr, or the “Festival of Breaking the Fast,” marks the end of Ramadan.It is a
+                  time
+                  of joy, gratitude, and unity.</p>
+              </div>
+            </div>
+          </div>
+          <!-- card 2 -->
+          <div class="col card-item" data-religion="muslim">
+            <div class="card-custom bg-white">
+              <div class="circle-video">
+                <video autoplay loop muted>
+                  <source src="/festival page/videos/eid-ul-adha.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div>
+                <h5 class="mb-1">Eid-ul-Adha</h5>
+                <p class="mb-0">It honors the unwavering faith and obedience of Prophet Ibrahim (A.S), who was willing
+                  to
+                  sacrifice his beloved son Ismail (A.S) as an act of submission to God.</p>
+              </div>
+            </div>
+          </div>
+          <!-- card 3 -->
+          <div class="col-12 col-md-6 card-item" data-religion="christian">
+            <div class="card-custom bg-white">
+              <div class="circle-video">
+                <video autoplay loop muted>
+                  <source src="/festival page/videos/tree.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div>
+                <h5 class="mb-1">Christmas</h5>
+                <p class="mb-0"> Christmas commemorates the birth of Jesus Christ in Bethlehem. It is a joyful time
+                  marked
+                  by prayers and family gatherings.</p>
+              </div>
+            </div>
+          </div>
+          <!-- card 4 -->
+          <div class="col-12 col-md-6 card-item" data-religion="christian">
+            <div class="card-custom bg-white">
+              <div class="circle-video">
+                <video autoplay loop muted>
+                  <source src="/festival page/videos/easter.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div>
+                <h5 class="mb-1">Easter</h5>
+                <p class="mb-0">Easter celebrates the resurrection of Jesus from the dead, three days after His
+                  crucifixion.
+                  It is the most important festival in Christianity.</p>
+              </div>
+            </div>
+          </div>
+          <!-- card 5 -->
+          <div class="col-12 col-md-6 card-item" data-religion="christian">
+            <div class="card-custom bg-white">
+              <div class="circle-video">
+                <video autoplay loop muted>
+                  <source src="/festival page/videos/good friday.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div>
+                <h5 class="mb-1">Good Friday</h5>
+                <p class="mb-0">It is a solemn day of remembrance, fasting, and prayer, reflecting on the sacrifice
+                  Jesus
+                  made for humanity.</p>
+              </div>
+            </div>
+          </div>
+          <!-- card 6 -->
+          <div class=" col-12 col-md-6 card-item" data-religion="christian">
+            <div class="card-custom bg-white">
+              <div class="circle-video">
+                <video autoplay loop muted>
+                  <source src="/festival page/videos/pentecost.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div>
+                <h5 class="mb-1">Pentecost</h5>
+                <p class="mb-0">Celebrated 50 days after Easter, Pentecost commemorates the descent of the Holy Spirit
+                  upon
+                  the apostles.</p>
+              </div>
+            </div>
+          </div>
+          <!-- card 7 -->
+          <div class="col-md-6 card-item col-12" data-religion="christian">
+            <div class="card-custom bg-white">
+              <div class="circle-video">
+                <video autoplay loop muted>
+                  <source src="/festival page/videos/epiphany.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div>
+                <h5 class="mb-1">Epiphany</h5>
+                <p class="mb-0">Epiphany, also known as Three Kings’ Day, is celebrated on January 6th. It commemorates
+                  the
+                  visit of the Magi (Wise Men) to the infant Jesus.</p>
+              </div>
+            </div>
+          </div>
+          <!-- card 8 -->
+          <div class="col-md-6 card-item col-12" data-religion="christian">
+            <div class="card-custom bg-white">
+              <div class="circle-video">
+                <video autoplay loop muted>
+                  <source src="/festival page/videos/palm sunday.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div>
+                <h5 class="mb-1">Palm Sunday</h5>
+                <p class="mb-0">Palm Sunday marks the beginning of Holy Week Jesus’ triumphant entry into Jerusalem,
+                  where
+                  crowds welcomed Him with palm branches.</p>
+              </div>
+            </div>
+          </div>
+          <!-- card 9 -->
+          <div class="col-md-6 card-item col-12" data-religion="christian">
+            <div class="card-custom bg-white">
+              <div class="circle-video">
+                <video autoplay loop muted>
+                  <source src="/festival page/videos/advent.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div>
+                <h5 class="mb-1">Advent</h5>
+                <p class="mb-0">Advent is a sacred season of preparation and anticipation, observed in the four weeks
+                  before
+                  Christmas.</p>
+              </div>
+            </div>
+          </div>
+          <!-- card 10 -->
+          <div class="col-md-6 card-item col-12" data-religion="christian">
+            <div class="card-custom bg-white">
+              <div class="circle-video">
+                <video autoplay loop muted>
+                  <source src="/festival page/videos/grave.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div>
+                <h5 class="mb-1"> All Saints' Day</h5>
+                <p class="mb-0">It is a time to remember those who dedicated their lives to God and now dwell in His
+                  eternal
+                  presence.</p>
+              </div>
+            </div>
+          </div>
+          <!-- card-11 -->
+          <div class="col-md-6 card-item col-12" data-religion="sikh">
+            <div class="card-custom bg-white">
+              <div class="circle-video">
+                <video autoplay loop muted>
+                  <source src="/festival page/videos/vaisakhi.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div>
+                <h5 class="mb-1">Vaisakhi</h5>
+                <p class="mb-0">It is both a religious and cultural festival, observed with prayers, Nagar Kirtans, and
+                  community gatherings.</p>
+              </div>
+            </div>
+          </div>
+          <!-- card-12 -->
+          <div class="col-md-6 card-item col-12" data-religion="sikh">
+            <div class="card-custom bg-white">
+              <div class="circle-video">
+                <video autoplay loop muted>
+                  <source src="/festival page/videos/gurparb.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div>
+                <h5 class="mb-1">Guru Nanak Gurpurab</h5>
+                <p class="mb-0">Guru Nanak Gurpurab celebrates the birth of Guru Nanak Dev Ji, the founder of Sikhism.
+                  It is
+                  the most important Sikh festival.</p>
+              </div>
+            </div>
+          </div>
+          <!-- card-13 -->
+          <div class="col-md-6 card-item col-12" data-religion="sikh">
+            <div class="card-custom bg-white">
+              <div class="circle-video">
+                <video autoplay loop muted>
+                  <source src="/festival page/videos/jayanti.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div>
+                <h5 class="mb-1">Guru Gobind Singh Jayanti</h5>
+                <p class="mb-0">This day honors the birth of Guru Gobind Singh Ji. The festival includes kirtan, poetry,
+                  and
+                  remembrance of his teachings.</p>
+              </div>
+            </div>
+          </div>
+          <!-- card-14 -->
+          <div class="col-md-6 card-item col-12" data-religion="sikh">
+            <div class="card-custom bg-white">
+              <div class="circle-video">
+                <video autoplay loop muted>
+                  <source src="/festival page/videos/mohalla.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div>
+                <h5 class="mb-1">Hola Mohalla</h5>
+                <p class="mb-0">Sikhs gather at Anandpur Sahib for spectacular displays of Gatka (martial arts), mock
+                  battles, and kirtan. </p>
+              </div>
+            </div>
+          </div>
+          <!-- card-15 -->
+          <div class="col-md-6 card-item col-12" data-religion="sikh">
+            <div class="card-custom bg-white">
+              <div class="circle-video">
+                <video autoplay loop muted>
+                  <source src="/festival page/videos/shaheedi.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div>
+                <h5 class="mb-1">Guru Arjan Dev Ji Shaheedi Divas</h5>
+                <p class="mb-0">This day honors the martyrdom of Guru Arjan Dev Ji, the 5th Guru of Sikhism, who was
+                  tortured to death.</p>
+              </div>
+            </div>
+          </div>
+          <!-- card-16 -->
+          <div class="col-md-6 card-item col-12" data-religion="sikh">
+            <div class="card-custom bg-white">
+              <div class="circle-video">
+                <video autoplay loop muted>
+                  <source src="/festival page/videos/ram das.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div>
+                <h5 class="mb-1">Guru Ram Das Jayanti</h5>
+                <p class="mb-0">He composed many of the hymns found in the Guru Granth Sahib and is remembered for
+                  promoting
+                  service, compassion etc.</p>
+              </div>
+            </div>
+          </div>
+          <!-- card-17 -->
+          <div class="col-md-6 card-item col-12" data-religion="sikh">
+            <div class="card-custom bg-white">
+              <div class="circle-video">
+                <video autoplay loop muted>
+                  <source src="/festival page/videos/maghi.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div>
+                <h5 class="mb-1">Maghi</h5>
+                <p class="mb-0">Maghi is celebrated in memory of the forty Sikh martyrs (Chali Mukte) who sacrificed
+                  their
+                  lives fighting for Guru Gobind Singh Ji.</p>
+              </div>
+            </div>
+          </div>
+          <!-- card-18-->
+          <div class="col-md-6 card-item col-12" data-religion="sikh">
+            <div class="card-custom bg-white">
+              <div class="circle-video">
+                <video autoplay loop muted>
+                  <source src="/festival page/videos/bandi.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div>
+                <h5 class="mb-1">Bandi Chhor Divas</h5>
+                <p class="mb-0">On this auspicious day, Guru Hargobind Sahib Ji secured the release of 52 innocent kings
+                  from unjust imprisonment and returned to Amritsar .</p>
+              </div>
+            </div>
+          </div>
+          <!-- card-19 -->
+          <div class="col-md-6 card-item col-12" data-religion="buddhist">
+            <div class="card-custom bg-white">
+              <div class="circle-video">
+                <video autoplay loop muted>
+                  <source src="/festival page/videos/magha puja.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div>
+                <h5 class="mb-1">Magha Puja</h5>
+                <p class="mb-0">A day to honor the spontaneous gathering of 1,250 enlightened monks to hear the Buddha’s
+                  teachings.</p>
+              </div>
+            </div>
+          </div>
+          <!-- card-20 -->
+          <div class="col-md-6 card-item col-12" data-religion="buddhist">
+            <div class="card-custom bg-white">
+              <div class="circle-video">
+                <video autoplay loop muted>
+                  <source src="/festival page/videos/Parinirvana Day.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div>
+                <h5 class="mb-1">Parinirvana Day</h5>
+                <p class="mb-0">Commemorates the passing of the Buddha into final Nirvana.</p>
+              </div>
+            </div>
+          </div>
+          <!-- card-21 -->
+          <div class="col-md-6 card-item col-12" data-religion="buddhist">
+            <div class="card-custom bg-white">
+              <div class="circle-video">
+                <video autoplay loop muted>
+                  <source src="/festival page/videos/vesak.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div>
+                <h5 class="mb-1">Vesak</h5>
+                <p class="mb-0">The most sacred day in Buddhism, celebrating the birth, enlightenment, and passing of
+                  the
+                  Buddha.</p>
+              </div>
+            </div>
+          </div>
+          <!-- card-22 -->
+          <div class="col-md-6 card-item col-12" data-religion="buddhist">
+            <div class="card-custom bg-white">
+              <div class="circle-video">
+                <video autoplay loop muted>
+                  <source src="/festival page/videos/asalha puja.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div>
+                <h5 class="mb-1">Asalha Puja</h5>
+                <p class="mb-0">Marks the Buddha’s first sermon — the turning of the Wheel of Dharma.</p>
+              </div>
+            </div>
+          </div>
+          <!-- card-23 -->
+          <div class="col-md-6 card-item col-12" data-religion="buddhist">
+            <div class="card-custom bg-white">
+              <div class="circle-video">
+                <video autoplay loop muted>
+                  <source src="/festival page/videos/sonkran.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div>
+                <h5 class="mb-1">Songkran</h5>
+                <p class="mb-0">The traditional Buddhist New Year, especially celebrated in Thailand.
+                  A joyful festival of water, cleansing and family.</p>
+              </div>
+            </div>
+          </div>
+          <!-- card-24 -->
+          <div class="col-md-6 card-item col-12" data-religion="buddhist">
+            <div class="card-custom bg-white">
+              <div class="circle-video">
+                <video autoplay loop muted>
+                  <source src="/festival page/videos/uposatha.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div>
+                <h5 class="mb-1">Uposatha</h5>
+                <p class="mb-0">A day of intensified practice, observed regularly by laypeople and monastics.
+                  Devoted to meditation, ethical reflection, and spiritual cleansing .</p>
+              </div>
+            </div>
+          </div>
+          <!-- card-25 -->
+          <div class="col-md-6 card-item col-12" data-religion="buddhist">
+            <div class="card-custom bg-white">
+              <div class="circle-video">
+                <video autoplay loop muted>
+                  <source src="/festival page/videos/kathina.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div>
+                <h5 class="mb-1">Kathina Ceremony</h5>
+                <p class="mb-0">A time of offering robes and necessities to the monastic community after the rains
+                  retreat.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- card-26 -->
+          <div class="col-md-6 card-item col-12" data-religion="buddhist">
+            <div class="card-custom bg-white">
+              <div class="circle-video">
+                <video autoplay loop muted>
+                  <source src="/festival page/videos/loy krathong - Trim.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div>
+                <h5 class="mb-1">Loy Krathong</h5>
+                <p class="mb-0">A beautiful festival of light and letting go, where candle-lit offerings float on water.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- card-27 -->
+          <div class="col-md-6 card-item col-12" data-religion="hindu">
+            <div class="card-custom bg-white">
+              <div class="circle-video">
+                <video autoplay loop muted>
+                  <source src="/festival page/videos/diwali.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div>
+                <h5 class="mb-1">Diwali</h5>
+                <p class="mb-0">Celebrates the victory of light over darkness and good over evil. Homes are decorated
+                  with diyas, rangoli, and fireworks.</p>
+              </div>
+            </div>
+          </div>
+          <!-- card-28 -->
+          <div class="col-md-6 card-item col-12" data-religion="hindu">
+            <div class="card-custom bg-white">
+              <div class="circle-video">
+                <video autoplay loop muted>
+                  <source src="/festival page/videos/holi.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div>
+                <h5 class="mb-1">Holi</h5>
+                <p class="mb-0">Marks the arrival of spring. People play with colors, water, and enjoy festive sweets
+                  like gujiya.</p>
+              </div>
+            </div>
+          </div>
+          <!-- card-29 -->
+          <div class="col-md-6 card-item col-12" data-religion="hindu">
+            <div class="card-custom bg-white">
+              <div class="circle-video">
+                <video autoplay loop muted>
+                  <source src="/festival page/videos/navratri.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div>
+                <h5 class="mb-1">Navratri </h5>
+                <p class="mb-0">9 nights of worshipping Goddess Durga’s different forms. Ends with Dussehra — the
+                  victory of Lord Rama over Ravana.</p>
+              </div>
+            </div>
+          </div>
+          <!-- card-30 -->
+          <div class="col-md-6 card-item col-12" data-religion="hindu">
+            <div class="card-custom bg-white">
+              <div class="circle-video">
+                <video autoplay loop muted>
+                  <source src="/festival page/videos//Janmashtami.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div>
+                <h5 class="mb-1">Janmashtami </h5>
+                <p class="mb-0">Birth of Lord Krishna. Celebrated with fasting, midnight celebrations, and Dahi Handi in
+                  Maharashtra.</p>
+              </div>
+            </div>
+          </div>
+          <!-- card-31 -->
+          <div class="col-md-6 card-item col-12" data-religion="hindu">
+            <div class="card-custom bg-white">
+              <div class="circle-video">
+                <video autoplay loop muted>
+                  <source src="/festival page/videos//Raksha Bandhan.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div>
+                <h5 class="mb-1">Raksha Bandhan</h5>
+                <p class="mb-0">Sister ties rakhi on brother’s wrist, symbolizing love and protection. Brother gives
+                  gifts and vows to protect her.</p>
+              </div>
+            </div>
+          </div>
+          <!-- card-32 -->
+          <div class="col-md-6 card-item col-12" data-religion="hindu">
+            <div class="card-custom bg-white">
+              <div class="circle-video">
+                <video autoplay loop muted>
+                  <source src="/festival page/videos/Makar Sankranti.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div>
+                <h5 class="mb-1">Makar Sankranti </h5>
+                <p class="mb-0">Marks sun’s transition into Capricorn. Celebrated with kite flying, sesame sweets, and
+                  prayers.</p>
+              </div>
+            </div>
+          </div>
+          <!-- card-33 -->
+          <div class="col-md-6 card-item col-12" data-religion="hindu">
+            <div class="card-custom bg-white">
+              <div class="circle-video">
+                <video autoplay loop muted>
+                  <source src="/festival page/videos/Ganesh Chaturthi.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div>
+                <h5 class="mb-1">Ganesh Chaturthi </h5>
+                <p class="mb-0">Birth of Lord Ganesha. Grand idols installed, worshipped, and later immersed in water
+                  with processions.</p>
+              </div>
+            </div>
+          </div>
+          <!-- card-34 -->
+          <div class="col-md-6 card-item col-12" data-religion="hindu">
+            <div class="card-custom bg-white">
+              <div class="circle-video">
+                <video autoplay loop muted>
+                  <source src="/festival page/videos/Ram Navami.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div>
+                <h5 class="mb-1">Ram Navami</h5>
+                <p class="mb-0"> Celebrates birth of Lord Rama. Devotees read Ramayana, sing bhajans, and visit temples.
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- footer -->
+  <footer class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <!-- 1st column -->
+        <div class="col-md-3">
+          <h5 class="fw-bold fs-4">Our Mission</h5>
+          <p>"Our religions may be different, but festivals bring all hearts together. Whether it’s the lights of
+            Diwali, the sweetness of Eid, the joy of Christmas, or the spirit of Gurpurab — every festival is a chance
+            to celebrate together."</p>
+        </div>
+
+        <!-- 2nd column -->
+        <div class="col-md-2">
+          <h5 class="fw-bold">Navigation</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2">
+            <li><a href="/festival page/festival.html">Festivals</a></li>
+            <li><a href="#">Site Map</a></li>
+          </ul>
+        </div>
+
+        <!-- 3rd column -->
+        <div class="col-md-4 ">
+          <h5 class="fw-bold">Contact Us</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2">
+            <li>
+              <span>📧</span>
+              <a href="mailto:supportfestival@gmail.com">supportfestival@gmail.com</a>
+            </li>
+            <li><span>🏡</span> Sector 11-A, North Karachi</li>
+            <li><span>📞</span> +92-321-2038-938</li>
+          </ul>
+        </div>
+
+        <!-- 4th column -->
+        <div class="col-md-3">
+          <h5 class="fw-bold pb-3">Follow Us</h5>
+          <ul class="list-unstyled d-flex gap-3">
+            <li><a href="https://www.instagram.com/waniaabrar_wa/" target="_blank" class="text-light fs-5"><i
+                  class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://wa.me/923208246598" target="_blank" class="text-light fs-5"><i
+                  class="fa-brands fa-whatsapp"></i></a></li>
+            <li><a href="https://www.facebook.com/anabiyakhan.anabiyakhan.9277" target="_blank"
+                class="text-light fs-5"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/bisma-sheikh-768911269/" target="_blank" class="text-light fs-5"><i
+                  class="fa-brands fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="border-light">
+      <p class="text-center m-0">&copy; Festivals 2025. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- bootstrap Script -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+    <script src="/festival page/filter.js"></script>
+</body>
+
+</html>

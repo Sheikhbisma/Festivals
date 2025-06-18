@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christians</title>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="/app.css">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    main {
+        padding-top: 80px;
+    }
+
+    body,
+    html {
+        overflow-x: hidden;
+        /* prevent from horizontal scrollbar */
+
+    }
+
+    body {
+        background:
+            radial-gradient(circle at 20% 20%, #FAFFCA 0%, transparent 30%),
+            radial-gradient(circle at 80% 80%, #B9D4AA 0%, transparent 30%),
+            linear-gradient(135deg, #5A827E, #84AE92);
+        background-blend-mode: overlay, overlay, normal;
+
+        color: #222;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        overflow: hidden !important;
+        /* prevent from double vertical scroll bar */
+
+    }
+
+    /* navbar */
+    nav {
+        background-color: var(--primary) !important;
+        color: #FAFFCA !important;
+    }
+
+    nav .nav-link,
+    .navbar-brand {
+        color: var(--tertiary) !important;
+        font-weight: 500;
+    }
+
+    /* hero section */
+    .hero {
+        height: 500px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* video  */
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    /* for content */
+    .hero .container {
+        height: 500px;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        padding: 0 15px;
+
+    }
+
+    .hero .container div {
+        max-width: 90%;
+        background: linear-gradient(135deg, rgba(90, 130, 126, 0.85), rgba(184, 212, 170, 0.85)) !important;
+        color: black;
+        padding: 10px;
+    }
+
+    /* cards */
+    .card {
+        height: 90%;
+
+        display: flex;
+        flex-direction: column;
+
+        padding: 20px 0;
+        margin-bottom: 30px;
+        border-radius: 16px !important;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        transition: transform 0.1 ease;
+
+    }
+
+    .card .btn {
+        display: inline !important;
+        margin: auto;
+    }
+
+    .card:hover {
+        transform: translateY(-10px) !important;
+    }
+
+    /* flat icon image */
+    .image {
+        height: 60px !important;
+        width: 60px !important;
+
+        display: inline;
+        margin: auto;
+    }
+
+    .image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .card h3 {
+        font-weight: bold;
+        padding: 5px 0px;
+    }
+
+    .card p {
+        padding: 0px 20px;
+    }
+
+    .fa-cross {
+        color: goldenrod;
+    }
+
+    .card i {
+        font-size: 3rem !important;
+    }
+
+    /* table */
+    .table {
+        background-color: white !important;
+
+    }
+
+    thead {
+        background-color: rgb(180, 180, 180);
+    }
+
+    /* for 1 column bold */
+    td:nth-child(1) {
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-lg bg-dark text-light">
+            <div class="container">
+                <div style="height: 70px;">
+                    <img src="/assets festival/FESTIVALS-cropped-final.png" alt="Festivals Logo"
+                        style="height: 100%; object-fit: contain;">
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-5 mb-2 mb-lg-0 gap-2">
+                        <li class="nav-item">
+                            <a class="nav-link " href="/index.html"><i class="fa-solid fa-house"></i> Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about us/about.html"><i class="fa-solid fa-user"></i> About</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="/festival page/festival.html" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-rainbow"></i> Festivals
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/festivals/muslim.html">Muslims</a></li>
+                                <li><a class="dropdown-item" href="/festivals/hindu.html">Hindus</a></li>
+                                <li><a class="dropdown-item" href="/festivals/sikhism.html">Sikh</a></li>
+                                <li><a class="dropdown-item" href="/festivals/buddhist.html">Buddhist</a></li>
+                                <li><a class="dropdown-item" href="/festivals/christian.html">Christian</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/book page/book.html"><i class="fa-solid fa-book"></i> Books</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/E-project gallery/gallery.html"><i
+                                    class="fa-brands fa-windows"></i> Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact/contact.html"><i class="fa-solid fa-phone-volume"></i>
+                                Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/querry/querry.html"><i class="fa-solid fa-magnifying-glass"></i>
+                                Query</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- first section -->
+        <section class="hero ">
+            <video src="/festivals/images/12866216_3840_2160_60fps.mp4" autoplay loop muted playsinline></video>
+            <div class="container d-flex align-items-center justify-content-center text-center">
+                <div class="text-center ">
+                    <h1 class="fw-bold">Celebrating Christian Festivals</h1>
+                    <p class="px-3 fw-bold"> Celebrating faith, hope, and the timeless traditions that bring millions
+                        together across the
+                        world.
+                    </p>
+
+                </div>
+            </div>
+        </section>
+        <!-- second section -->
+        <section class="festivs py-5">
+            <div class="container">
+                <h1 class="pb-5 text-center fw-bold" data-aos="fade-right" data-aos-duration="1000">Christian Festivals
+                </h1>
+                <!-- cards in one line -->
+                <div class="row">
+                    <!-- card-1 -->
+                    <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1000">
+                        <div class="card text-center py-4">
+                            <div class="image">
+                                <img src="/festivals/images/christmas-tree-min.webp" alt="" class="img-fluid">
+                            </div>
+                            <h3 class="card-title">Christmas </h3>
+                            <p class="card-text"> Christmas celebrates the birth of Jesus Christ in Bethlehem.
+                                Christians believe that God
+                                sent His Son to Earth to bring salvation to humanity. </p>
+                            <a href="/festivals/ms word/Contents.docx" download class="btn btn-success"
+                                onclick="alert('Your file is downloading...')">View history</a>
+                        </div>
+                    </div>
+                    <!-- card-2 -->
+                    <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1000">
+                        <div class="card text-center">
+                            <div class="image">
+                                <img src="/festivals/images/easter-egg-min.webp" alt="">
+                            </div>
+                            <h3 class="card-title">Easter</h3>
+                            <p class="card-text"> Easter commemorates the resurrection of Jesus from the dead, three
+                                days after His
+                                crucifixion.Victory over death, eternal life, and salvation.</p>
+                            <a href="/festivals/ms word/easter.docx" download class="btn btn-info  text-light"
+                                onclick="alert('Your file is downloading...')">View history</a>
+                        </div>
+                    </div>
+                    <!-- card-3 -->
+                    <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1000">
+                        <div class="card text-center">
+                            <div class="image">
+                                <img src="/festivals/images/island-tropical-min.webp" alt="">
+                            </div>
+                            <h3 class="card-title">Palm Sunday</h3>
+                            <p class="card-text"> Palm Sunday takes place one week before Easter and marks the beginning
+                                of Holy Week.
+                                Churches often distribute palm leaves to worshippers
+                            </p>
+                            <a href="/festivals/ms word/palm sunday.docx" class="btn btn-dark  "
+                                onclick="alert('Your file is downloading...')">View history</a>
+
+                        </div>
+                    </div>
+                    <!-- card-4 -->
+                    <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1000">
+                        <div class="card text-center">
+                            <i class="fa-solid fa-cross"></i>
+                            <h3 class="card-title">Pentecost </h3>
+                            <p class="card-text"> Pentecost occurs 50 days after Easter and celebrates the descent of
+                                the Holy Spirit upon
+                                the apostles and other followers of Jesus.</p>
+                            <a href="/festivals/ms word/pentecost.docx" download class="btn btn-warning  "
+                                onclick="alert('Your file is downloading...')">View history</a>
+                        </div>
+                    </div>
+                    <!-- card-5 -->
+                    <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1000">
+                        <div class="card text-center">
+                            <div class="image">
+                                <img src="/festivals/images/bible-min.webp" alt="">
+                            </div>
+                            <h3 class="card-title">Epiphany </h3>
+                            <p class="card-text"> In many cultures, Epiphany is marked by special church services,
+                                blessing of homes, and
+                                the sharing of traditional foods.</p>
+                            <a href="/festivals/ms word/epiphany.docx" download class="btn btn-dark  "
+                                onclick="alert('Your file is downloading...')">View history</a>
+                        </div>
+                    </div>
+                    <!-- card-6 -->
+                    <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1000">
+                        <div class="card text-center">
+                            <div class="image">
+                                <img src="/festivals/images/candle-holder-min.webp" alt="">
+                            </div>
+                            <h3>Advent</h3>
+                            <p class="card-text"> Churches light a candle on an Advent wreath each week, and many people
+                                engage in prayer,
+                                fasting, and acts of kindness.</p>
+                            <a href="/festivals/ms word/advent.docx" download class="btn btn-secondary  "
+                                onclick="alert('Your file is downloading...')">View history</a>
+                        </div>
+                    </div>
+                    <!-- card-7 -->
+                    <div class="col-md-4 offset-md-2" data-aos="zoom-in" data-aos-duration="1000">
+                        <div class="card text-center">
+                            <div class="image">
+                                <img src="/festivals/images/good-friday-min.webp" alt="">
+                            </div>
+                            <h3 class="card-title">Good Friday</h3>
+                            <p class="card-text"> Good Friday commemorates the crucifixion and death of Jesus Christ at
+                                Calvary. It is
+                                observed on the Friday before Easter and is a solemn day of reflection.</p>
+                            <a href="/festivals/ms word/good friday.docx" download class="btn btn-success"
+                                onclick="alert('Your file is downloading...')">View history</a>
+
+                        </div>
+                    </div>
+                    <!-- card-8 -->
+                    <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1000">
+                        <div class="card text-center">
+                            <i class="fa-solid fa-church " style="color: brown;"></i>
+                            <h3 class="card-title">All Saints’ Day </h3>
+                            <p class="card-text"> All Saints’ Day is celebrated on honors all saints, known and unknown,
+                                who have lived
+                                faithful Christian lives.Many Christians and visit graves of loved ones on this day.</p>
+                            <a href="/festivals/ms word/saints.docx" download class="btn text-light"
+                                onclick="alert('Your file is downloading...')" style="background-color: brown;">View
+                                history</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- third section -->
+        <section class="calender py-5">
+            <h1 class="text-center fs-3 fw-bold pb-5" data-aos="fade-left" data-aos-duration="1000">📅 Christian
+                Festival Calendar – 2025</h1>
+            <div class="container">
+                <!-- table -->
+                <table class="table table-bordered text-center table-hover" data-aos="fade-up" data-aos-duration="2000">
+                    <thead>
+                        <tr>
+
+                            <th scope="col">Festivals</th>
+                            <th scope="col">date (2025)</th>
+                            <th scope="col">Day</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+
+                            <td>Epiphany</td>
+                            <td>January 6, 2025</td>
+                            <td>Monday</td>
+                        </tr>
+                        <tr class="table-success">
+
+                            <td>Palm Sunday</td>
+                            <td>April 13, 2025</td>
+                            <td>Sunday</td>
+                        </tr>
+                        <tr>
+
+                            <td>Good Friday </td>
+                            <td>April 18, 2025</td>
+                            <td>Friday</td>
+                        </tr>
+                        <tr class="table-success">
+
+                            <td>Easter</td>
+                            <td>April 20, 2025</td>
+                            <td>Sunday</td>
+                        </tr>
+                        <tr>
+
+                            <td>Pentecost</td>
+                            <td>June 8, 2025</td>
+                            <td>Sunday</td>
+                        </tr>
+                        <tr class="table-success">
+
+                            <td>All Saints’ Day</td>
+                            <td>November 1, 2025</td>
+                            <td>Saturday</td>
+                        </tr>
+                        <tr>
+
+                            <td>Advent Begins </td>
+                            <td>November 30, 2025 </td>
+                            <td>Sunday</td>
+                        </tr>
+                        <tr class="table-success">
+
+                            <td>Christmas</td>
+                            <td>December 25, 2025 </td>
+                            <td>Thursday</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <!-- footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- 1st column -->
+                <div class="col-md-3">
+                    <h5 class="fw-bold fs-4">Our Mission</h5>
+                    <p>"Our religions may be different, but festivals bring all hearts together. Whether it’s the lights
+                        of Diwali, the sweetness of Eid, the joy of Christmas, or the spirit of Gurpurab — every
+                        festival is a chance to celebrate together."</p>
+                </div>
+
+                <!-- 2nd column -->
+                <div class="col-md-2">
+                    <h5 class="fw-bold">Navigation</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li><a href="/festival page/festival.html">Festivals</a></li>
+                        <li><a href="#">Site Map</a></li>
+                    </ul>
+                </div>
+
+                <!-- 3rd column -->
+                <div class="col-md-4 ">
+                    <h5 class="fw-bold">Contact Us</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li>
+                            <span>📧</span>
+                            <a href="mailto:supportfestival@gmail.com">supportfestival@gmail.com</a>
+                        </li>
+                        <li><span>🏡</span> Sector 11-A, North Karachi</li>
+                        <li><span>📞</span> +92-321-2038-938</li>
+                    </ul>
+                </div>
+
+                <!-- 4th column -->
+                <div class="col-md-3">
+                    <h5 class="fw-bold pb-3">Follow Us</h5>
+                    <ul class="list-unstyled d-flex gap-3">
+                        <li><a href="https://www.instagram.com/waniaabrar_wa/" target="_blank"
+                                class="text-light fs-5"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://wa.me/923208246598" target="_blank" class="text-light fs-5"><i
+                                    class="fa-brands fa-whatsapp"></i></a></li>
+                        <li><a href="https://www.facebook.com/anabiyakhan.anabiyakhan.9277" target="_blank"
+                                class="text-light fs-5"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/bisma-sheikh-768911269/" target="_blank"
+                                class="text-light fs-5"><i class="fa-brands fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="border-light">
+            <p class="text-center m-0">&copy; Festivals 2025. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+
+
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+
+    </script>
+    <!-- boodstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

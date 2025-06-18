@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Religious Books</title>
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <!-- css -->
+  <link rel="stylesheet" href="/app.css">
+  <style>
+    :root {
+      --primary: #5A827e;
+      --secondary: #B9D4AA;
+      --tertiary: #FAFFCA;
+      --light: #84AE92;
+    }
+
+    main {
+      padding-top: 80px;
+    }
+
+
+    .hero-section {
+      height: 80vh;
+      background-image: url("/book page/books image/vlad-patana-YkqyL8fNvu4-unsplash-min.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      padding: 0 15px;
+      background: linear-gradient(135deg, rgba(90, 130, 126, 0.85), rgba(184, 212, 170, 0.85));
+    }
+
+    .book-card {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 15px;
+      background-color: var(--tertiary);
+    }
+
+    .book-image {
+      width: 150px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-right: 20px;
+    }
+
+    .container h1 {
+      color: white;
+    }
+
+    .btn {
+      background-color: var(--primary);
+      border-radius: 10px;
+      color: var(--tertiary);
+    }
+
+    .btn:hover {
+      background-color: black;
+      color: var(--tertiary);
+
+
+    }
+  </style>
+</head>
+
+<body>
+  <header class="fixed-top">
+    <nav class="navbar navbar-expand-lg bg-dark text-light">
+      <div class="container">
+        <div style="height: 70px;">
+          <img src="/assets festival/FESTIVALS-cropped-final.png" alt="Festivals Logo"
+            style="height: 100%; object-fit: contain;">
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-5 mb-2 mb-lg-0 gap-2">
+            <li class="nav-item">
+              <a class="nav-link " href="/index.html"><i class="fa-solid fa-house"></i> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about us/about.html"><i class="fa-solid fa-user"></i> About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="/festival page/festival.html" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-rainbow"></i> Festivals
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="/festivals/muslim.html">Muslims</a></li>
+                <li><a class="dropdown-item" href="/festivals/hindu.html">Hindus</a></li>
+                <li><a class="dropdown-item" href="/festivals/sikhism.html">Sikh</a></li>
+                <li><a class="dropdown-item" href="/festivals/buddhist.html">Buddhist</a></li>
+                <li><a class="dropdown-item" href="/festivals/christian.html">Christian</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/book page/book.html"><i class="fa-solid fa-book"></i> Books</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/E-project gallery/gallery.html"><i class="fa-brands fa-windows"></i>
+                Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact/contact.html"><i class="fa-solid fa-phone-volume"></i> Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/querry/querry.html"><i class="fa-solid fa-magnifying-glass"></i> Query</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <main>
+    <section class="hero-section d-flex align-items-center justify-content-center text-center">
+      <div class="hero-content text-white">
+        <h1 class="display-4 fw-bold">Welcome to the World of Faith</h1>
+        <p class="lead">Discover sacred books from major world religions that inspire and guide millions.</p>
+      </div>
+    </section>
+    <section id="content">
+      <div class="container mt-5">
+        <div class="heading py-5">
+          <h1 class="text-center mb-4 fw-bold">" Religious Books Store"</h1>
+          <h3 class="text-center">A Collection of Sacred Texts from Five World Religions.</h3>
+        </div>
+
+        <div id="books-container">
+
+          <!-- Muslim Book -->
+          <h2 class="fw-bold">
+            <li>Book of Muslim (Islam)</li>
+          </h2>
+          <div class="book-card">
+            <img src="/book page/books image/Quran img-min.jpg " alt="Quran" class="book-image">
+            <div>
+              <h5 class="fw-bold">Holy Quran</h5>
+              <p>The holy book of Islam, believed to be the word of God revealed to Prophet Muhammad (PBUH).</p>
+              <p class="price fw-bold">Price: $12 | Rs.3396</p>
+              <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#modalMuslim">Purchase
+                now</button>
+            </div>
+          </div>
+          <!-- sahih bukhari Book -->
+          <h2 class="fw-bold">
+            <li>Islamic Book</li>
+          </h2>
+          <div class="book-card">
+            <img src="/book page/books image/Sahih-Al-Bukhari-min.jpg " alt="Quran" class="book-image">
+            <div>
+              <h5 class="fw-bold">Sahih-Al-Bukhari</h5>
+              <p>"The most authentic collection of Hadith in Islam, compiled by Imam Bukhari."</p>
+              <p class="price fw-bold">Price: $15 | Rs.4000</p>
+              <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#modalbukhari">Purchase
+                now</button>
+            </div>
+          </div>
+          <!-- sahih-al-Muslim Book -->
+          <h2 class="fw-bold">
+            <li>Islamic Book</li>
+          </h2>
+          <div class="book-card">
+            <img src="/book page/books image/sahih-ul-muslim-min.jpg " alt="Quran" class="book-image">
+            <div>
+              <h5 class="fw-bold">Sahih-Al-Muslim</h5>
+              <p>"The second most authentic Hadith collection, compiled by Imam Muslim."</p>
+              <p class="price fw-bold">Price: $12 | Rs.3000</p>
+              <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#modalhadees">Purchase
+                now</button>
+            </div>
+          </div>
+
+          <!-- Hindu Book -->
+          <h2 class="fw-bold">
+            <li>Book of Hinduism</li>
+          </h2>
+          <div class="book-card">
+            <img src="/book page/books image/Bhagavad gita img-min.jpg" alt="Hindu Book" class="book-image">
+            <div>
+              <h5 class="fw-bold">Bhagavad Gita</h5>
+              <p>A sacred scripture of the Hindu religion, offering guidance on life, duty, and spirituality.</p>
+              <p class="price fw-bold">Price: $10 | Rs.2830</p>
+              <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#modalHindu">Purchase
+                now</button>
+            </div>
+          </div>
+
+          <!-- Sikh Book -->
+          <h2 class="fw-bold">
+            <li>Book of Sikhism</li>
+          </h2>
+          <div class="book-card">
+            <img src="/book page/books image/Siri-Guru-Granth-Sahib img-min.jpg" alt="Sikh Book" class="book-image">
+            <div>
+              <h5 class="fw-bold">Guru Granth Sahib</h5>
+              <p>The central religious scripture of Sikhism, regarded by Sikhs as the final, sovereign guru.</p>
+              <p class="price fw-bold">Price: $15 | Rs.4244</p>
+              <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#modalSikh">Purchase
+                now</button>
+            </div>
+          </div>
+
+          <!-- Buddhist Book -->
+          <h2 class="fw-bold">
+            <li>Book of Buddhism</li>
+          </h2>
+          <div class="book-card">
+            <img src="/book page/books image/Tirpitaka img-min.jpg" alt="Buddhist Book" class="book-image">
+            <div>
+              <h5 class="fw-bold">Tripitaka</h5>
+              <p>The traditional term for the Buddhist scriptures. It consists of three "baskets" of teachings.</p>
+              <p class="price fw-bold">Price: $14 | Rs.3961</p>
+              <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#modalBuddhist">Purchase
+                now</button>
+            </div>
+          </div>
+
+          <!-- Christian Book -->
+          <h2 class="fw-bold">
+            <li>Book of Christianity</li>
+          </h2>
+          <div class="book-card">
+            <img src="/book page/books image/Bible img-min.jpg" alt="Bible" class="book-image">
+            <div>
+              <h5 class="fw-bold">Holy Bible</h5>
+              <p>The sacred scripture of Christianity, divided into the Old and New Testaments.</p>
+              <p class="price fw-bold">Price: $11 | Rs.3113</p>
+              <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#modalChristian">Purchase
+                now</button>
+            </div>
+
+          </div>
+          <!-- knwoing god -->
+          <h2 class="fw-bold">
+            <li>Book of Christianity</li>
+          </h2>
+          <div class="book-card">
+            <img src="/book page/books image/christianity.avif" alt="Bible" class="book-image">
+            <div>
+              <h5 class="fw-bold">Knowing God</h5>
+              <p>"A powerful guide to deeply understanding God's character and growing in personal faith."</p>
+              <p class="price fw-bold">Price: $6 | Rs.1200</p>
+              <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#modalChristianbook">Purchase
+                now</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Modals for Each Book -->
+      <!-- Muslim Modal -->
+      <div class="modal fade" id="modalMuslim" tabindex="-1" aria-labelledby="modalMuslimLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalMuslimLabel">Purchase - Holy Quran</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <p>Thank you for your interest in the Holy Quran. Proceed to checkout or continue browsing.</p>
+              <p><strong>Price:</strong> $12 | Rs.3396</p>
+              <input type="text" class="form-control mb-3" placeholder="Enter your email to proceed">
+              <button class="btn btn-success">Proceed to Payment</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- sahih bukhari -->
+      <div class="modal fade" id="modalbukhari" tabindex="-1" aria-labelledby="modalMuslimLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalMuslimLabel">Purchase - Sahih-Al-Bukhari</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <p>Thank you for your interest in the Sahih-Al-Bukhari. Proceed to checkout or continue browsing.</p>
+              <p><strong>Price:</strong> $15 | Rs.4000</p>
+              <input type="text" class="form-control mb-3" placeholder="Enter your email to proceed">
+              <button class="btn btn-success">Proceed to Payment</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- sahih muslim -->
+      <div class="modal fade" id="modalhadees" tabindex="-1" aria-labelledby="modalMuslimLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalMuslimLabel">Purchase - Sahih-Al-Muslim</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <p>Thank you for your interest in the Holy Quran. Proceed to checkout or continue browsing.</p>
+              <p><strong>Price:</strong> $12 | Rs.3000</p>
+              <input type="text" class="form-control mb-3" placeholder="Enter your email to proceed">
+              <button class="btn btn-success">Proceed to Payment</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hindu Modal -->
+      <div class="modal fade" id="modalHindu" tabindex="-1" aria-labelledby="modalHinduLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalHinduLabel">Purchase - Bhagavad Gita</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <p>Thank you for your interest in the Bhagavad Gita. Proceed to checkout or continue browsing.</p>
+              <p><strong>Price:</strong> $10 | Rs.2830</p>
+              <input type="text" class="form-control mb-3" placeholder="Enter your email to proceed">
+              <button class="btn btn-success">Proceed to Payment</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sikh Modal -->
+      <div class="modal fade" id="modalSikh" tabindex="-1" aria-labelledby="modalSikhLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalSikhLabel">Purchase - Guru Granth Sahib</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <p>Thank you for your interest in the Guru Granth Sahib. Proceed to checkout or continue browsing.</p>
+              <p><strong>Price:</strong> $15 | Rs.4244</p>
+              <input type="text" class="form-control mb-3" placeholder="Enter your email to proceed">
+              <button class="btn btn-success">Proceed to Payment</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Buddhist Modal -->
+      <div class="modal fade" id="modalBuddhist" tabindex="-1" aria-labelledby="modalBuddhistLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalBuddhistLabel">Purchase - Tripitaka</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <p>Thank you for your interest in the Tripitaka. Proceed to checkout or continue browsing.</p>
+              <p><strong>Price:</strong> $14 | Rs.3961</p>
+              <input type="text" class="form-control mb-3" placeholder="Enter your email to proceed">
+              <button class="btn btn-success">Proceed to Payment</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Christian Modal -->
+      <div class="modal fade" id="modalChristian" tabindex="-1" aria-labelledby="modalChristianLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalChristianLabel">Purchase - Holy Bible</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <p>Thank you for your interest in the Holy Bible. Proceed to checkout or continue browsing.</p>
+              <p><strong>Price:</strong> $1 | Rs.3113</p>
+              <input type="text" class="form-control mb-3" placeholder="Enter your email to proceed">
+              <button class="btn btn-success">Proceed to Payment</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Christian Modal -->
+      <div class="modal fade" id="modalChristianbook" tabindex="-1" aria-labelledby="modalChristianLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalChristianLabel">Purchase - Knowing God</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <p>Thank you for your interest in the Knowing God. Proceed to checkout or continue browsing.</p>
+              <p><strong>Price:</strong> $6 | Rs.1200</p>
+              <input type="text" class="form-control mb-3" placeholder="Enter your email to proceed">
+              <button class="btn btn-success">Proceed to Payment</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <!-- footer -->
+  <footer class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <!-- 1st column -->
+        <div class="col-md-3">
+          <h5 class="fw-bold fs-4">Our Mission</h5>
+          <p>"Our religions may be different, but festivals bring all hearts together. Whether it’s the lights of
+            Diwali, the sweetness of Eid, the joy of Christmas, or the spirit of Gurpurab — every festival is a chance
+            to celebrate together."</p>
+        </div>
+
+        <!-- 2nd column -->
+        <div class="col-md-2">
+          <h5 class="fw-bold">Navigation</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2">
+            <li><a href="/festival page/festival.html">Festivals</a></li>
+            <li><a href="#">Site Map</a></li>
+          </ul>
+        </div>
+
+        <!-- 3rd column -->
+        <div class="col-md-4 ">
+          <h5 class="fw-bold">Contact Us</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2">
+            <li>
+              <span>📧</span>
+              <a href="mailto:supportfestival@gmail.com">supportfestival@gmail.com</a>
+            </li>
+            <li><span>🏡</span> Sector 11-A, North Karachi</li>
+            <li><span>📞</span> +92-321-2038-938</li>
+          </ul>
+        </div>
+
+        <!-- 4th column -->
+        <div class="col-md-3">
+          <h5 class="fw-bold pb-3">Follow Us</h5>
+          <ul class="list-unstyled d-flex gap-3">
+            <li><a href="https://www.instagram.com/waniaabrar_wa/" target="_blank" class="text-light fs-5"><i
+                  class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://wa.me/923208246598" target="_blank" class="text-light fs-5"><i
+                  class="fa-brands fa-whatsapp"></i></a></li>
+            <li><a href="https://www.facebook.com/anabiyakhan.anabiyakhan.9277" target="_blank"
+                class="text-light fs-5"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/bisma-sheikh-768911269/" target="_blank" class="text-light fs-5"><i
+                  class="fa-brands fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="border-light">
+      <p class="text-center m-0">&copy; Festivals 2025. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
