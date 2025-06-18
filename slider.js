@@ -1,45 +1,42 @@
-let nextBtn = document.querySelector('.next')
-let prevBtn = document.querySelector('.prev')
+let $nextBtn = $('.next');
+let $prevBtn = $('.prev');
 
-let slider = document.querySelector('.slider')
-let sliderList = slider.querySelector('.slider .list')
-let thumbnail = document.querySelector('.slider .thumbnail')
-let thumbnailItems = thumbnail.querySelectorAll('.item')
+let $slider = $('.slider');
+let $sliderList = $slider.find('.list');
+let $thumbnail = $slider.find('.thumbnail');
+let $thumbnailItems = $thumbnail.find('.item');
 
-thumbnail.appendChild(thumbnailItems[0])
+$thumbnail.append($thumbnailItems.eq(0));
 
-// Function for next button 
-nextBtn.onclick = function() {
-    moveSlider('next')
-}
+// Function for next button
+$nextBtn.on('click', function() {
+    moveSlider('next');
+});
 
-
-// Function for prev button 
-prevBtn.onclick = function() {
-    moveSlider('prev')
-}
-
+// Function for prev button
+$prevBtn.on('click', function() {
+    moveSlider('prev');
+});
 
 function moveSlider(direction) {
-    let sliderItems = sliderList.querySelectorAll('.item')
-    let thumbnailItems = document.querySelectorAll('.thumbnail .item')
-    
-    if(direction === 'next'){
-        sliderList.appendChild(sliderItems[0])
-        thumbnail.appendChild(thumbnailItems[0])
-        slider.classList.add('next')
+    let $sliderItems = $sliderList.find('.item');
+    let $thumbnailItems = $thumbnail.find('.item');
+
+    if (direction === 'next') {
+        $sliderList.append($sliderItems.eq(0));
+        $thumbnail.append($thumbnailItems.eq(0));
+        $slider.addClass('next');
     } else {
-        sliderList.prepend(sliderItems[sliderItems.length - 1])
-        thumbnail.prepend(thumbnailItems[thumbnailItems.length - 1])
-        slider.classList.add('prev')
+        $sliderList.prepend($sliderItems.last());
+        $thumbnail.prepend($thumbnailItems.last());
+        $slider.addClass('prev');
     }
 
-
-    slider.addEventListener('animationend', function() {
-        if(direction === 'next'){
-            slider.classList.remove('next')
+    $slider.one('animationend', function () {
+        if (direction === 'next') {
+            $slider.removeClass('next');
         } else {
-            slider.classList.remove('prev')
+            $slider.removeClass('prev');
         }
-    }, {once: true}) // Remove the event listener after it's triggered once
+    });
 }
