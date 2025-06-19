@@ -10,6 +10,9 @@
     --tertiary:#FAFFCA;
     --light:#84AE92;
 }
+main{
+  padding-top: 80px;
+}
    body {
     margin: 0;
     padding: 0;
