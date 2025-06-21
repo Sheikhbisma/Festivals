@@ -1,4 +1,4 @@
-$(document).ready(function(){
+  $(document).ready(function(){
     $('.btn').click(function(e){
         e.preventDefault();
         let user = $('.user').val();

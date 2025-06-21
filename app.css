@@ -10,6 +10,25 @@
     --tertiary:#FAFFCA;
     --light:#84AE92;
 }
+html, body {
+  overflow-x: hidden;
+}
+
+.navbar {
+  max-width: 100%;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
 
    body {
     margin: 0;
@@ -20,7 +39,6 @@
     linear-gradient(135deg, #5A827E, #84AE92);
     background-blend-mode: overlay, overlay, normal;
     color: #222;
-  overflow-x: hidden;
   font-family: "Inter", sans-serif;
   }
 
@@ -334,6 +352,7 @@ nav {
   border-radius: 12px;
   padding: 8px 15px;
   transition: all 0.3s ease;
+ 
 }
 
 .nav-link:hover {
@@ -463,3 +482,5 @@ nav {
     font-size: 2rem;
     color: var(--tertiary);
 }
+
+

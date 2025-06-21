@@ -159,7 +159,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse justify-content-center pt-4" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-5 mb-2 mb-lg-0 gap-2">
                         <li class="nav-item">
                             <a class="nav-link " href="/index.html"><i class="fa-solid fa-house"></i> Home</a>
@@ -226,7 +226,7 @@
                     <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1000">
                         <div class="card text-center py-4">
                             <div class="image">
-                                <img src="/festivals/images/christmas-tree-min.webp" alt="" class="img-fluid">
+                                <img src="/festivals/images/christmas-tree-min.webp" alt="Christmas" class="img-fluid">
                             </div>
                             <h3 class="card-title">Christmas </h3>
                             <p class="card-text"> Christmas celebrates the birth of Jesus Christ in Bethlehem.
@@ -240,7 +240,7 @@
                     <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1000">
                         <div class="card text-center">
                             <div class="image">
-                                <img src="/festivals/images/easter-egg-min.webp" alt="">
+                                <img src="/festivals/images/easter-egg-min.webp" alt="easter">
                             </div>
                             <h3 class="card-title">Easter</h3>
                             <p class="card-text"> Easter commemorates the resurrection of Jesus from the dead, three
@@ -254,7 +254,7 @@
                     <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1000">
                         <div class="card text-center">
                             <div class="image">
-                                <img src="/festivals/images/island-tropical-min.webp" alt="">
+                                <img src="/festivals/images/island-tropical-min.webp" alt="palm sunday">
                             </div>
                             <h3 class="card-title">Palm Sunday</h3>
                             <p class="card-text"> Palm Sunday takes place one week before Easter and marks the beginning
@@ -282,7 +282,7 @@
                     <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1000">
                         <div class="card text-center">
                             <div class="image">
-                                <img src="/festivals/images/bible-min.webp" alt="">
+                                <img src="/festivals/images/bible-min.webp" alt="Epiphany">
                             </div>
                             <h3 class="card-title">Epiphany </h3>
                             <p class="card-text"> In many cultures, Epiphany is marked by special church services,
@@ -296,7 +296,7 @@
                     <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1000">
                         <div class="card text-center">
                             <div class="image">
-                                <img src="/festivals/images/candle-holder-min.webp" alt="">
+                                <img src="/festivals/images/candle-holder-min.webp" alt="Advent">
                             </div>
                             <h3>Advent</h3>
                             <p class="card-text"> Churches light a candle on an Advent wreath each week, and many people
@@ -310,7 +310,7 @@
                     <div class="col-md-4 offset-md-2" data-aos="zoom-in" data-aos-duration="1000">
                         <div class="card text-center">
                             <div class="image">
-                                <img src="/festivals/images/good-friday-min.webp" alt="">
+                                <img src="/festivals/images/good-friday-min.webp" alt="good friday">
                             </div>
                             <h3 class="card-title">Good Friday</h3>
                             <p class="card-text"> Good Friday commemorates the crucifixion and death of Jesus Christ at
@@ -468,7 +468,11 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
-        AOS.init();
+           AOS.init({
+      once: true,
+      duration: 1000,
+      easing: 'ease-in-out',
+    });
 
     </script>
     <!-- boodstrap js -->

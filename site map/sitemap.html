@@ -5,6 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Website Sitemap</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/app.css">
+   <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- css -->
+  <link rel="stylesheet" href="/app.css">
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <!-- jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- aos -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   
   <style>
    
@@ -17,6 +36,7 @@
     background-blend-mode: overlay, overlay, normal;      border-radius: 20px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
       padding: 30px;
+      
     }
 
     .sitemap-title {
@@ -49,8 +69,63 @@
   </style>
 </head>
 <body>
+  <header class="fixed-top">
+    <nav class="navbar navbar-expand-lg bg-dark text-light mb-5">
+      <div class="container">
+        <div style="height: 70px;">
+          <img src="/assets festival/FESTIVALS-cropped-final.png" alt="Festivals Logo"
+            style="height: 100%; object-fit: contain;" loading="lazy">
+        </div>
 
-  <div class="container sitemap-card ">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent" >
+          <ul class="navbar-nav ms-5 mb-2 mb-lg-0 gap-2 py-4 py-lg-2">
+            <li class="nav-item">
+              <a class="nav-link active" href="/index.html"><i class="fa-solid fa-house"></i> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about us/about.html"><i class="fa-solid fa-user"></i> About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="/festival page/festival.html" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-rainbow"></i> Festivals
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="/festivals/muslim.html">Muslims</a></li>
+                <li><a class="dropdown-item" href="/festivals/hindu.html">Hindus</a></li>
+                <li><a class="dropdown-item" href="/festivals/sikhism.html">Sikh</a></li>
+                <li><a class="dropdown-item" href="/festivals/buddhist.html">Buddhist</a></li>
+                <li><a class="dropdown-item" href="/festivals/christian.html">Christian</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/E-project gallery/gallery.html"><i class="fa-brands fa-windows"></i>
+                Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/book page/book.html"><i class="fa-solid fa-book"></i> Books</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact/contact.html"><i class="fa-solid fa-phone-volume"></i> Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/querry/querry.html"><i class="fa-solid fa-magnifying-glass"></i> Query</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  
+
+  <div class="container sitemap-card  ">
     <div class="sitemap-title text-center">📍 Website Sitemap</div>
 
     <div class="sitemap">
@@ -72,4 +147,78 @@
   </div>
 
 </body>
+<!-- footer -->
+    <footer class="py-5">
+      <div class="container">
+        <div class="row g-4">
+          <!-- 1st column -->
+          <div class="col-md-3">
+            <h5 class="fw-bold fs-4">Our Mission</h5>
+            <p>"Our religions may be different, but festivals bring all hearts together. Whether it’s the lights of
+              Diwali, the sweetness of Eid, the joy of Christmas, or the spirit of Gurpurab — every festival is a chance
+              to celebrate together."</p>
+          </div>
+
+          <!-- 2nd column -->
+          <div class="col-md-2">
+            <h5 class="fw-bold">Navigation</h5>
+            <ul class="list-unstyled d-flex flex-column gap-2">
+              <li><a href="/festival page/festival.html">Festivals</a></li>
+              <li><a href="/site map/sitemap.html">Site Map</a></li>
+            </ul>
+          </div>
+
+          <!-- 3rd column -->
+          <div class="col-md-4 ">
+            <h5 class="fw-bold">Contact Us</h5>
+            <ul class="list-unstyled d-flex flex-column gap-2">
+              <li>
+                <span>📧</span>
+                <a href="mailto:supportfestival@gmail.com">supportfestival@gmail.com</a>
+              </li>
+              <li><span>🏡</span> Sector 11-A, North Karachi</li>
+              <li><span>📞</span> +92-321-2038-938</li>
+            </ul>
+          </div>
+
+          <!-- 4th column -->
+          <div class="col-md-3">
+            <h5 class="fw-bold pb-3">Follow Us</h5>
+            <ul class="list-unstyled d-flex gap-3">
+              <li><a href="https://www.instagram.com/waniaabrar_wa/" target="_blank" class="text-light fs-5"><i
+                    class="fa-brands fa-instagram"></i></a></li>
+              <li><a href="https://wa.me/923208246598" target="_blank" class="text-light fs-5"><i
+                    class="fa-brands fa-whatsapp"></i></a></li>
+              <li><a href="https://www.facebook.com/anabiyakhan.anabiyakhan.9277" target="_blank"
+                  class="text-light fs-5"><i class="fa-brands fa-facebook"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/bisma-sheikh-768911269/" target="_blank"
+                  class="text-light fs-5"><i class="fa-brands fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="border-light">
+        <p class="text-center m-0">&copy; Festivals 2025. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- bootsrtap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+
+    <script src="slider.js"></script>
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+        duration: 1000,
+        disable: window.innerWidth < 768
+      });
+    </script>
+
+</body>
+
+</html>
 </html>
