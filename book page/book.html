@@ -12,6 +12,9 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- google fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <!-- jquery cdn -->
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
   <!-- css -->
   <link rel="stylesheet" href="/app.css">
   <style>
@@ -275,8 +278,8 @@
             <div class="modal-body">
               <p>Thank you for your interest in the Holy Quran. Proceed to checkout or continue browsing.</p>
               <p><strong>Price:</strong> $12 | Rs.3396</p>
-              <input type="text" class="form-control mb-3" placeholder="Enter your email to proceed">
-              <button class="btn btn-success" onclick="alert('Thank you for purchasing...')">Proceed to Payment</button>
+              <input type="email" class="form-control mb-3" placeholder="Enter your email to proceed" required>
+              <button class="btn btn-success purchase-btn" >Proceed to Payment</button>
             </div>
           </div>
         </div>
@@ -292,8 +295,8 @@
             <div class="modal-body">
               <p>Thank you for your interest in the Sahih-Al-Bukhari. Proceed to checkout or continue browsing.</p>
               <p><strong>Price:</strong> $15 | Rs.4000</p>
-              <input type="text" class="form-control mb-3" placeholder="Enter your email to proceed">
-              <button class="btn btn-success" onclick="alert('Thank you for purchasing...')">Proceed to Payment</button>
+              <input type="email" class="form-control mb-3" placeholder="Enter your email to proceed" required>
+              <button class="btn btn-success purchase-btn" >Proceed to Payment</button>
             </div>
           </div>
         </div>
@@ -309,8 +312,8 @@
             <div class="modal-body">
               <p>Thank you for your interest in the Holy Quran. Proceed to checkout or continue browsing.</p>
               <p><strong>Price:</strong> $12 | Rs.3000</p>
-              <input type="text" class="form-control mb-3" placeholder="Enter your email to proceed">
-              <button class="btn btn-success" onclick="alert('Thank you for purchasing...')">Proceed to Payment</button>
+              <input type="email" class="form-control mb-3" placeholder="Enter your email to proceed" required>
+              <button class="btn btn-success purchase-btn" >Proceed to Payment</button>
             </div>
           </div>
         </div>
@@ -327,8 +330,8 @@
             <div class="modal-body">
               <p>Thank you for your interest in the Bhagavad Gita. Proceed to checkout or continue browsing.</p>
               <p><strong>Price:</strong> $10 | Rs.2830</p>
-              <input type="text" class="form-control mb-3" placeholder="Enter your email to proceed">
-              <button class="btn btn-success" onclick="alert('Thank you for purchasing...')">Proceed to Payment</button>
+              <input type="email" class="form-control mb-3" placeholder="Enter your email to proceed" required>
+              <button class="btn btn-success purchase-btn" >Proceed to Payment</button>
             </div>
           </div>
         </div>
@@ -345,8 +348,8 @@
             <div class="modal-body">
               <p>Thank you for your interest in the Guru Granth Sahib. Proceed to checkout or continue browsing.</p>
               <p><strong>Price:</strong> $15 | Rs.4244</p>
-              <input type="text" class="form-control mb-3" placeholder="Enter your email to proceed">
-              <button class="btn btn-success" onclick="alert('Thank you for purchasing...')">Proceed to Payment</button>
+              <input type="email" class="form-control mb-3" placeholder="Enter your email to proceed" required>
+              <button class="btn btn-success purchase-btn" >Proceed to Payment</button>
             </div>
           </div>
         </div>
@@ -363,8 +366,8 @@
             <div class="modal-body">
               <p>Thank you for your interest in the Tripitaka. Proceed to checkout or continue browsing.</p>
               <p><strong>Price:</strong> $14 | Rs.3961</p>
-              <input type="text" class="form-control mb-3" placeholder="Enter your email to proceed">
-              <button class="btn btn-success" onclick="alert('Thank you for purchasing...')">Proceed to Payment</button>
+              <input type="email" class="form-control mb-3" placeholder="Enter your email to proceed" required>
+              <button class="btn btn-success purchase-btn" >Proceed to Payment</button>
             </div>
           </div>
         </div>
@@ -382,8 +385,8 @@
             <div class="modal-body">
               <p>Thank you for your interest in the Holy Bible. Proceed to checkout or continue browsing.</p>
               <p><strong>Price:</strong> $1 | Rs.3113</p>
-              <input type="text" class="form-control mb-3" placeholder="Enter your email to proceed">
-              <button class="btn btn-success" onclick="alert('Thank you for purchasing...')">Proceed to Payment</button>
+              <input type="email" class="form-control mb-3" placeholder="Enter your email to proceed" required>
+              <button class="btn btn-success purchase-btn" >Proceed to Payment</button>
             </div>
           </div>
         </div>
@@ -400,8 +403,8 @@
             <div class="modal-body">
               <p>Thank you for your interest in the Knowing God. Proceed to checkout or continue browsing.</p>
               <p><strong>Price:</strong> $6 | Rs.1200</p>
-              <input type="text" class="form-control mb-3" placeholder="Enter your email to proceed">
-              <button class="btn btn-success" onclick="alert('Thank you for purchasing...')">Proceed to Payment</button>
+              <input type="email" class="form-control mb-3" placeholder="Enter your email to proceed" required>
+              <button class="btn btn-success purchase-btn" >Proceed to Payment</button>
             </div>
           </div>
         </div>
@@ -463,6 +466,21 @@
       <p class="text-center m-0">&copy; Festivals 2025. All Rights Reserved.</p>
     </div>
   </footer>
+<script>
+  $(document).ready(function () {
+    $('.purchase-btn').on('click', function () {
+      const modal = $(this).closest('.modal');
+      const email = modal.find('input[type="email"]').val().trim();
+
+      if (email === '') {
+        alert('Please enter your email before proceeding.');
+      } else {
+        alert('Thank you for purchasing...');
+      }
+    });
+  });
+</script>
+
 
   <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
